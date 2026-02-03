@@ -1,0 +1,14 @@
+current:
+cloud
+condition(text, icon)
+humidity
+last_updated
+temp_c
+temp_f
+Wind kph
+
+location:
+country
+localtime
+name
+region

@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151716;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 50vh;
+    background-image: url(Weather.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+header::after {
+    content: "";
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(rgba(0, 0, 0, 0.541), rgba(0, 0, 0, 0.849));
+}
+
+nav {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    align-items: center;
+}
+
+nav .logo {
+    background: repeating-linear-gradient(45deg, #ff0000, #ff00008f 52px);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-family: poppins;
+    font-size: 35px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: orbitron;
+}
+
+.box {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.box h1 {
+    font-family: "Roboto";
+    font-size: 50px;
+}
+
+.box p {
+    letter-spacing: 5px;
+    margin-bottom: 55px;
+    font-family: orbitron;
+}
+
+.box form {
+    display: flex;
+    align-items: center;
+}
+
+form input {
+    height: 40px;
+    width: 300px;
+    padding-left: 5px;
+    font-family: poppins;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.253);
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0.26);
+    border-radius: 5px 0 0 5px;
+    color: white;
+}
+
+form input:focus-visible {
+    outline: 0;
+}
+
+form button {
+    background-color: #00ffff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: invert();
+    font-weight: 700;
+    font-family: orbitron;
+}
+.err{
+    color: #ff0000;
+}
+main {
+    padding: 30px;
+}
+.notfound{
+    text-align: center;
+    font-family: poppins;
+    font-size: 20px;
+}
+#result {
+    background-color: #1f201f;
+    border-radius: 10px;
+    font-family: "poppins";
+    font-weight: 300;
+    width: 550px;
+    padding: 20px 10px 10px 10px;
+}
+#result>p{
+    font-size: 15px;
+}
+#result b {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.content {
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+}
+
+.content .temp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 20px;
+}
+
+.temp img {
+    width: 120px;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    font-family: arial;
+    line-height: 30px;
+}
+
+.c {
+    font-size: 50px;
+}
+
+.f {
+    font-size: 30px;
+    padding-left: 8px;
+}
+
+.detail {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.342);
+}
+
+.top p {
+    font-size: 14px;
+    color: rgb(224, 224, 224);
+}
+
+.top div {
+    font-size: 20px;
+}
+.bottom{
+    background-color: rgba(255, 255, 255, 0.144);
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    border-radius: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    gap: 5px;
+}
+.bottom img {
+    filter: invert();
+}
+.line{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.time span{
+    font-size: 14px;
+}
