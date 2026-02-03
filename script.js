@@ -1,32 +1,25 @@
 let div = document.createElement('div');
 let form = document.getElementById("form");
+form.after(div);
 async function getWeather(city) {
-
     let api = `https://api.weatherapi.com/v1/current.json?key=0db1076176ff4325bd8164157260202&q=${city}`;
-
     let a = await fetch(api);
     let b = await a.json();
-
     return b;
 }
 
 async function main(e) {
-
     e.preventDefault();
-
     let city = document.getElementById("search").value.trim();
     let container = document.getElementById("container");
     container.innerHTML = "";
-    form.after(div);
     div.innerHTML = "";
     if (city === "") {
-
         div.innerHTML = "<div class='err'>Please enter a city name</div>";
         return;
     }
     try {
         let weather = await getWeather(city);
-
         if (weather.error) {
             let notfound = document.createElement("div");
             notfound.setAttribute('class', 'notfound')
