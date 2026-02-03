@@ -1,4 +1,5 @@
 let div = document.createElement('div');
+div.innerHTML = "";
 let form = document.getElementById("form");
 form.after(div);
 async function getWeather(city) {
@@ -13,7 +14,6 @@ async function main(e) {
     let city = document.getElementById("search").value.trim();
     let container = document.getElementById("container");
     container.innerHTML = "";
-    div.innerHTML = "";
     if (city === "") {
         div.innerHTML = "<div class='err'>Please enter a city name</div>";
         return;
